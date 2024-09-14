@@ -1,15 +1,10 @@
-<!-- NOTE: This layout.blade.php will serve as the Header & Footer of your page -->
-<!-- <pre>
-{{ print_r($pageInfo, true) }}
-</pre> -->
-
 <!-- Header -->
-<x-header>
+<x-user-header>
    <x-slot:title>Freeset | Home</x-slot:title>
-</x-header>
+</x-user-header>
 
 <!-- Navbar -->
-<x-navbar />
+<x-user-navbar />
 
 <!-- Main Content -->
 <main>
@@ -66,11 +61,11 @@
    <hr>
    <div class="row">
       <div class="col-md-7 py-5">
-         <h2>Hello</h2>
+         <h2>First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
          <p>Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
       </div>
       <div class="col-md-5 py-5 d-flex justify-content-center">
-         <img src="images/preset_1.png" alt="" class="img-fluid" style="max-width: 75%;">
+         <img src="images/default_preset.png" alt="" class="img-fluid" style="max-width: 75%;">
       </div>
    </div>
    <hr>
@@ -80,10 +75,10 @@
          <p>Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
       </div>
       <div class="col-md-5 py-5 order-md-1 d-flex justify-content-center">
-         <img src="images/preset_1.png" alt="" class="img-fluid" style="max-width: 75%;">
+         <img src="images/default_preset.png" alt="" class="img-fluid" style="max-width: 75%;">
       </div>
    </div>
 </div>
 
 <!-- Footer -->
-<x-footer />
+<x-user-footer />

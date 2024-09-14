@@ -1,8 +1,3 @@
-<!-- NOTE: This layout.blade.php will serve as the Header & Footer of your page -->
-<pre>
-{{ print_r($pageInfo, true) }}
-</pre>
-
 <!-- Header -->
 <x-header>
     <x-slot:title>Freeset | Presets</x-slot:title>
@@ -21,15 +16,29 @@
     </ol>
     <hr>
     <div class="row gap-4 gap-md-3 gap-sm-5 d-flex justify-content-evenly pt-5">
+        @if (count($presets) === 0)
+        <!-- Display no preset found if the presets table is empty -->
+        <span class="text-danger text-center">No preset data found</span>
+        @else
+        <!-- Display all presets if the presets table has available data -->
         @foreach ($presets as $preset)
-        <div class="card border-secondary mb-5" style="width: 18rem;">
-            <img src="images/preset_1.png" class="img" alt="..." style="padding-top: 0.7rem;">
+        <div class="card border-secondary p-3 mb-5" style="width: 18rem;">
+            <img src="{{ $preset->image_path ? asset('storage/' . $preset->image_path) : asset('images/default_preset.png') }}" width="auto" height="250" class="preset-display" alt="Preset Image">
             <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-dark">{{ $preset['title'] }}</h5>
+                <a href="/preset/{{ $preset['id'] }}" style="text-decoration: none;">
+                    <h5 class="card-title text-dark">{{ $preset['title'] }}</h5>
+                </a>
+                <!-- Preset description -->
                 <!-- <p class="card-text">{{ $preset['description'] }}</p> -->
+                <!-- Star rating -->
+                <p class="card-text">{!! getStarIcons($preset['rating']) !!}</p>
                 <div class="d-grid mt-auto">
-                    <p>{{ $preset['price'] }}</p>
-                    <a href="/preset/{{ $preset['id'] }}">
+                    @if ($preset['price'] == 0)
+                    <p>Free</p>
+                    @elseif ($preset['price'] != 0)
+                    <p>₱{{ $preset['price'] }}.00</p>
+                    @endif
+                    <a href="#Download">
                         <button class="btn btn-outline-dark w-100">
                             <i class="bx bxs-download align-middle" style="font-size:20px;"></i> Download
                         </button>
@@ -37,8 +46,13 @@
                 </div>
             </div>
         </div>
-
         @endforeach
+        @endif
+        <!-- added pagination test -->
+        <!-- Laravel pagination links -->
+        <div class="d-flex justify-content-center px-5 mt-3">
+            {{ $presets->links('pagination::bootstrap-4') }}
+        </div>
     </div>
 </div>
 

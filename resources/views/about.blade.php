@@ -1,15 +1,10 @@
-<!-- NOTE: This layout.blade.php will serve as the Header & Footer of your page -->
-<pre>
-{{ print_r($pageInfo, true) }}
-</pre>
-
 <!-- Header -->
-<x-header>
+<x-user-header>
     <x-slot:title>Freeset | About</x-slot:title>
-</x-header>
+</x-user-header>
 
 <!-- Navbar -->
-<x-navbar />
+<x-user-navbar />
 
 <!-- Main Content -->
 <div class="container p-0 my-5">
@@ -27,4 +22,4 @@
 </div>
 
 <!-- Footer -->
-<x-footer />
+<x-user-footer />

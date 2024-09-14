@@ -1,4 +1,3 @@
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
    <div class="container">
       <a class="navbar-brand text-dark" href="/">&raquo; Freeset</a>
