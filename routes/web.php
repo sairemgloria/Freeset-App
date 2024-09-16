@@ -81,5 +81,8 @@ Route::prefix('admin')->group(function () {
     // Check if a preset name already exists
     Route::post('update-preset-name', [PresetController::class, 'checkExistingPresetName'])->name('admin.checkPresetName');
     // Update preset
-    route::put('preset/{id}', [PresetController::class, 'updatePreset'])->name('admin.updatePreset');
+    Route::put('preset/{id}', [PresetController::class, 'updatePreset'])->name('admin.updatePreset');
+
+    // Delete preset
+    Route::delete('preset/{id}/delete', [PresetController::class, 'deletePreset']);
 });

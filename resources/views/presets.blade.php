@@ -40,7 +40,7 @@
                     @endif
                     <a href="#Download">
                         <button class="btn btn-outline-dark w-100">
-                            <i class="bx bxs-download align-middle" style="font-size:20px;"></i> Download
+                            <i class="bx bxs-download align-middle" style="font-size:18px;"></i> Download
                         </button>
                     </a>
                 </div>
@@ -50,9 +50,9 @@
         @endif
         <!-- added pagination test -->
         <!-- Laravel pagination links -->
-        <div class="d-flex justify-content-center px-5 mt-3">
-            {{ $presets->links('pagination::bootstrap-4') }}
-        </div>
+        <!-- <div class=""> -->
+            {{ $presets->links('pagination::bootstrap-5') }}
+        <!-- </div> -->
     </div>
 </div>
 

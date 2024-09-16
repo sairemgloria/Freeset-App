@@ -212,4 +212,25 @@ class PresetController extends Controller
          'message' => 'Preset updated successfully.'
       ], 200);
    }
+
+   // Delete preset
+   public function deletePreset($id)
+   {
+      // Find the preset by ID
+      $preset = Preset::find($id);
+
+      // Check if the preset exists
+      if (!$preset) {
+         return response()->json(['error' => 'Preset not found.'], 404);
+      }
+
+      // Delete the preset
+      $preset->delete();
+
+      // Return a success response
+      return response()->json([
+         'success' => true,
+         'message' => 'Preset deleted successfully.'
+      ]);
+   }
 }

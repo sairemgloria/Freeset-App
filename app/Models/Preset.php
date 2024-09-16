@@ -13,5 +13,5 @@ class Preset extends Model
    protected $table = 'presets';
 
    // if it set $fillable then it can be used the php artisan tinker
-   protected $fillable = ['preset_id', 'title', 'description', 'price', 'display_image_before', 'display_image_after', 'image_path', 'preset_path'];
+   protected $fillable = ['preset_id', 'title', 'description', 'price', 'display_image_before', 'display_image_after', 'image_path'];
 }

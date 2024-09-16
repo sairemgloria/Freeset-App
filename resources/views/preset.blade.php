@@ -77,20 +77,22 @@
                      </tr>
                   </table>
                </div>
-               <div class="col d-flex">
-                  <div class="pe-2">
-                     <a href="#Rate">
-                        <button class="btn btn-outline-warning w-auto">
-                           <i class="bx bxs-star text-align-center"></i> Rate
-                        </button>
-                     </a>
-                  </div class="pe-0">
-                  <div>
-                     <a href="#Download">
-                        <button class="btn btn-outline-success w-auto">
-                           <i class="bx bxs-download text-align-center"></i> Download
-                        </button>
-                     </a>
+               <div class="row">
+                  <div class="col-12 d-flex flex-column flex-md-row">
+                     <div class="pe-0 pe-sm-2 mb-2 mb-md-0">
+                        <a href="#Rate">
+                           <button class="btn btn-outline-warning w-100">
+                              <i class="bx bxs-star text-align-middle"></i> Rate
+                           </button>
+                        </a>
+                     </div>
+                     <div class="pe-0">
+                        <a href="#Download">
+                           <button class="btn btn-outline-success w-100">
+                              <i class="bx bxs-download align-middle" style="font-size:16px;"></i> Download
+                           </button>
+                        </a>
+                     </div>
                   </div>
                </div>
             </figure>

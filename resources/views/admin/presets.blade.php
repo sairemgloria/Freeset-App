@@ -46,7 +46,9 @@
                   <img src="{{ $preset->image_path ? asset('storage/' . $preset->image_path) : asset('images/default_preset.png') }}" width="50" height="50" alt="Preset Image">
                </td>
                <td class="text-primary align-middle text-center">{{ $preset->title }}</td>
-               <td class="text-primary align-middle text-center">{{ $preset->description }}</td>
+               <td class="text-primary align-middle text-center">
+                  {{ Str::limit($preset->description, limit: 20) }}
+               </td>
                <td class="text-primary align-middle text-center">₱ {{ $preset->price }}.00</td>
                <td class="text-primary align-middle text-center">
                   <div class="d-flex justify-content-center gap-1" data-bs-theme="dark">
@@ -57,7 +59,7 @@
                         <i class='bx bx-edit'></i>
                      </a>
                      <!-- Use JS function for delete with the correct preset ID -->
-                     <a href="#" onclick="confirmDeletePost(event, id);" class="btn bg-danger d-flex justify-content-center align-items-center py-2">
+                     <a href="#" onclick="confirmDeletePost(event, {{ $preset->id }});" class="btn bg-danger d-flex justify-content-center align-items-center py-2">
                         <i class='bx bx-trash'></i>
                      </a>
                   </div>

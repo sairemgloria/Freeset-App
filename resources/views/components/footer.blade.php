@@ -1,4 +1,4 @@
-<div class="container pt-3 px-0">
+<div class="container px-0">
    <footer class="d-flex flex-wrap justify-content-between align-items-center px-3 py-3 mt-4 border-top">
       <div class="col-md-4 d-flex align-items-center">
          <span class="text-body-secondary">&copy; <?= date("Y"); ?> Made with <i class="bx bx-heart align-middle"></i> Xsai</span>

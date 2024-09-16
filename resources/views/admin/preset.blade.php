@@ -84,17 +84,19 @@
                </div>
                <!-- TEST CODE -->
                <div class="col-lg-6 pt-3 pt-sm-0 pt-md-5 pt-lg-0">
-                  <div class="row">
-                     <label for="preset_path" class="form-label text-primary mb-2 mb-sm-2">Upload Preset</label>
-                     <div class="col-12 col-sm-9 mb-2 mb-sm-0">
-                        <input class="form-control" type="file" id="preset_path" name="preset_path" autocomplete="off">
+                  <form action="">
+                     <div class="row">
+                        <label for="preset_path" class="form-label text-primary mb-2 mb-sm-2">Upload Preset</label>
+                        <div class="col-12 col-sm-9 mb-3 mb-sm-0">
+                           <input class="form-control" type="file" id="preset_path" name="preset_path" autocomplete="off">
+                        </div>
+                        <div class="col-12 col-sm-3 ps-auto ps-sm-0">
+                           <button type="button" class="btn btn-outline-success w-100 d-flex align-items-center justify-content-center">
+                              <i class='bx bx-upload me-1'></i>Upload
+                           </button>
+                        </div>
                      </div>
-                     <div class="col-12 col-sm-3 ps-auto ps-sm-0">
-                        <button type="button" class="btn btn-outline-success w-100 d-flex align-items-center justify-content-center">
-                           <i class='bx bx-upload me-1'></i>Upload
-                        </button>
-                     </div>
-                  </div>
+                  </form>
                </div>
             </figure>
          </div>
